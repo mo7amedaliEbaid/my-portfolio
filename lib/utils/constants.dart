@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:my_portfolio/models/header_item.dart';
 import 'package:my_portfolio/utils/utils.dart';
 
-const Color kPrimaryColor = Color(0xFFFFD800);
+const Color kPrimaryColor = Color(0xFFAD9D42);
 const Color kBackgroundColor = Color.fromRGBO(7, 17, 26, 1);
 const Color kDangerColor = Color.fromARGB(255, 243, 22, 22);
-const Color kCaptionColor = Color.fromRGBO(166, 177, 187, 1);
+const Color klightCaptionColor = Color.fromRGBO(17, 16, 122, 1.0);
+const Color kdarkCaptionColor = Color.fromRGBO(206, 227, 223, 1.0);
 
 const double kDesktopMaxWidth = 1000.0;
 const double kTabletMaxWidth = 760.0;
@@ -13,7 +14,11 @@ const double kTabletMaxWidth = 760.0;
 double getMobileMaxWidth(BuildContext context) =>
     MediaQuery.of(context).size.width * .8;
 
-class AppConstants {
+sealed class AppConstants {
+
+  static const String backgroundLottie1="assets/lotties/background1.json";
+  static const String backgroundLottie="assets/lotties/background.json";
+
   static const linkedInUrl = "https://www.linkedin.com/in/mo7amedebaid/";
   static const youtubeUrl = "https://youtube.com/@user-tb3pp4zo9o?si=qn_jL-HBDcVy4WG5";
   static const githubUrl = "https://github.com/mo7amedaliEbaid";

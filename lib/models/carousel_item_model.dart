@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class CarouselItemModel {
+interface class HomeItemModel {
   final Widget text;
   final Widget image;
 
-  CarouselItemModel({
+  HomeItemModel({
     required this.text,
     required this.image,
   });
