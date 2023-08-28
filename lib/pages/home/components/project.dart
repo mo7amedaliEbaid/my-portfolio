@@ -34,7 +34,7 @@ class ProjectSection extends StatelessWidget {
           runAlignment: WrapAlignment.center,
           children: projects
               .map((e) => Container(
-                  width: width * .32,
+                  width:ScreenHelper.isMobile(context)?500: width * .32,
                   margin: const EdgeInsets.symmetric(
                     horizontal: 20,
                     vertical: 15,
@@ -52,7 +52,7 @@ class ProjectSection extends StatelessWidget {
         builder: (context, constraints) {
           return Consumer(builder: (context, ref, _) {
             return Container(
-              width: width * .3,
+              width:ScreenHelper.isMobile(context)?420: width * .3,
               padding: const EdgeInsets.all(10),
               decoration: BoxDecoration(
                   color: ref.watch(themeProvider).isDarkMode

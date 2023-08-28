@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-//import 'package:google_fonts/google_fonts.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:my_portfolio/models/footer_item.dart';
 import 'package:my_portfolio/utils/constants.dart';
 import 'package:my_portfolio/utils/screen_helper.dart';
@@ -99,10 +99,10 @@ Widget _buildUi(double width, BuildContext context) {
                                       ),
                                       Text(
                                         footerItem.title,
-                                       /* style: GoogleFonts.josefinSans(
+                                        style: GoogleFonts.josefinSans(
                                           fontSize: 18.0,
                                           fontWeight: FontWeight.w700,
-                                        ),*/
+                                        ),
                                       ),
                                     ],
                                   ),
