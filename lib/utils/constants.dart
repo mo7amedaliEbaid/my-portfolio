@@ -7,7 +7,6 @@ const Color kBackgroundColor = Color.fromRGBO(7, 17, 26, 1);
 const Color kDangerColor = Color.fromARGB(255, 243, 22, 22);
 const Color kCaptionColor = Color.fromRGBO(166, 177, 187, 1);
 
-// Lets replace all static sizes
 const double kDesktopMaxWidth = 1000.0;
 const double kTabletMaxWidth = 760.0;
 
@@ -69,16 +68,8 @@ class AppConstants {
   static const providerImage = _stateImages + "provider.png";
   static const riverpodImage = _stateImages + "riverpod.png";
 
-  static const _projectsImages = _images + "projects/";
-  static const smartStoreImage = _projectsImages + "1.jpeg";
-  static const crossTheRoadImage = _projectsImages + "2.jpeg";
-  static const newsUpImage = _projectsImages + "3.jpeg";
-  static const musicLabImage = _projectsImages + "4.jpeg";
-  static const personalFaceImage = _projectsImages + "5.jpeg";
-  static const computerStoreImage = _projectsImages + "6.jpeg";
 
-  static const _gifs = _outputs + "gif/";
-  static const portfolioGif = _gifs + "mobile.gif";
+
 
   static List<String> firebaseSkills = [
     "Firebase Auth",

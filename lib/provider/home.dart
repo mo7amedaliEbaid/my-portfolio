@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:my_portfolio/models/header_item.dart';
-import 'package:my_portfolio/utils/constants.dart';
-import 'package:my_portfolio/utils/utils.dart';
 
 final homeProvider = ChangeNotifierProvider((ref) => HomeProvider());
 
@@ -59,8 +57,6 @@ class HomeProvider extends ChangeNotifier {
       scrollToPortfolio();
     } else if (nameOnTap.title == "Skills") {
       scrollToSkills();
-    } else if (nameOnTap.title == "Blog") {
-     // Utilty.openUrl(AppConstants.mediumUrl);
     }
   }
 }

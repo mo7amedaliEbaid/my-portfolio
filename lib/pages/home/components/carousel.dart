@@ -16,7 +16,7 @@ class Carousel extends StatelessWidget {
   Widget build(BuildContext context) {
     double carouselContainerHeight = MediaQuery.of(context).size.height *
         (ScreenHelper.isMobile(context) ? .7 : .85);
-    log(MediaQuery.sizeOf(context).height.toString());
+   // log(MediaQuery.sizeOf(context).height.toString());
     return SizedBox(
       height: carouselContainerHeight,
       width: double.infinity,
@@ -28,7 +28,6 @@ class Carousel extends StatelessWidget {
             child: CarouselSlider(
               carouselController: carouselController,
               options: CarouselOptions(
-                // autoPlay: true,
                 viewportFraction: 1,
                 scrollPhysics: const NeverScrollableScrollPhysics(),
                 height: carouselContainerHeight,
@@ -42,7 +41,6 @@ class Carousel extends StatelessWidget {
                         minHeight: carouselContainerHeight,
                       ),
                       child: ScreenHelper(
-                        // Responsive views
                         desktop: _buildDesktop(
                           context,
                           carouselItems(carouselContainerHeight,context)[index].text,

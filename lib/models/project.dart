@@ -1,6 +1,4 @@
-import 'package:my_portfolio/models/link.dart';
 import 'package:my_portfolio/models/technology.dart';
-import 'package:my_portfolio/utils/constants.dart';
 
 class ProjectModel {
   final String project;
@@ -8,7 +6,6 @@ class ProjectModel {
   final String description;
   final String projectLink;
   final List<TechnologyModel> techUsed;
-  List<LinkModel>? links = [];
   final String? buttonText;
 
   ProjectModel({
@@ -18,7 +15,6 @@ class ProjectModel {
     required this.projectLink,
     required this.techUsed,
     this.buttonText,
-    this.links,
   });
 
   static List<ProjectModel> projects = [
@@ -27,7 +23,6 @@ class ProjectModel {
       title: "Islamic App",
       description:
       "This is a flutter Islamic App with Complete Quran, Prayer times Api, Hadith, Azkar and Five Pillars of Islam. It has many features such as playing youtube videos, search quran, multiple languages, multiple themes and much more...",
-      //  appPhotos: AppConstants.newsUpImage,
       projectLink: "https://github.com/mo7amedaliEbaid/islamic",
       techUsed: [
         TechnologyConstants.flutter,
@@ -39,7 +34,6 @@ class ProjectModel {
       project: "Flutter App",
       title: "Alpha Store",
       description: "Alpha Store is a Flutter app for hyper, multi-categories market to display products, manage sales and orders.",
-     // appPhotos: AppConstants.crossTheRoadImage,
       projectLink: "https://github.com/mo7amedaliEbaid/Ecommerce-Flutter",
       techUsed: [
         TechnologyConstants.flutter,
@@ -128,15 +122,6 @@ class ProjectModel {
     ),
   ];
 
-  static List<ProjectModel> demos = [
-    ProjectModel(
-      project: "Flutter App",
-      title: "Flutter Web Portfolio",
-      description: "",
-      projectLink: "https://github.com/AgnelSelvan/Flutter-Web-Portfolio",
-      techUsed: [],
-      buttonText: "Github Link",
-    ),
-  ];
+
 
 }
