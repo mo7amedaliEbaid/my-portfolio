@@ -579,16 +579,7 @@ HomeItemModel homeItem(
             ),
           ),
     image: SizedBox.shrink(
-        /*  height: 200,
-      width: 200,
-      margin: EdgeInsets.all(50),
-      decoration: BoxDecoration(
-          shape: BoxShape.circle,
-          image: DecorationImage(
-              image: AssetImage(
-                AppConstants.profileimg,
-              ),
-              fit: BoxFit.contain)),*/
+
         ),
   );
 }
