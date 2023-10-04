@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:my_portfolio/models/header_item.dart';
 import 'package:my_portfolio/utils/utils.dart';
 
-const Color kPrimaryColor = Color(0xFFAD9D42);
+const Color kPrimaryColor = Color(0xFF40AB6E);
 const Color kBackgroundColor = Color.fromRGBO(7, 17, 26, 1);
 const Color kDangerColor = Color.fromARGB(255, 243, 22, 22);
 const Color klightCaptionColor = Color.fromRGBO(17, 16, 122, 1.0);
@@ -23,6 +23,7 @@ sealed class AppConstants {
   static const youtubeUrl = "https://youtube.com/@user-tb3pp4zo9o?si=qn_jL-HBDcVy4WG5";
   static const githubUrl = "https://github.com/mo7amedaliEbaid";
   static const facebookUrl = "https://www.facebook.com/mohamed.ebied.980/";
+  static const leetcodeUrl = "https://leetcode.com/mo7amedaliebaid/";
 
 
 
@@ -44,6 +45,7 @@ sealed class AppConstants {
   static const youtubeImage = _socialImages + "youtube.png";
   static const githubImage = _socialImages + "github.png";
   static const facebookImage = _socialImages + "facebook.png";
+  static const leetcodeImage = _socialImages + "leetcode.png";
 
   static const _techImages = _images + "technology/";
   static const flutterImage = _techImages + "flutter.png";
@@ -144,6 +146,11 @@ sealed class AppConstants {
         title: facebookImage,
         onTap: () {
           Utilty.openUrl(facebookUrl);
+        }),
+    NameOnTap(
+        title: leetcodeImage,
+        onTap: () {
+          Utilty.openUrl(leetcodeUrl);
         }),
   ];
 }

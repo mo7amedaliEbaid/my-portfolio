@@ -13,10 +13,10 @@ class RouterGenerator {
     switch (settings.name) {
       case Routes.initial:
         return _GeneratePageRoute(
-            widget: const Home(), routeName: settings.name);
+            widget: const MainPage(), routeName: settings.name);
       default:
         return _GeneratePageRoute(
-            widget: const Home(), routeName: settings.name);
+            widget: const MainPage(), routeName: settings.name);
     }
   }
 }

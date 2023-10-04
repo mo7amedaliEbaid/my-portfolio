@@ -15,14 +15,14 @@ import 'package:my_portfolio/utils/globals.dart';
 import 'package:my_portfolio/utils/screen_helper.dart';
 import 'package:my_portfolio/widgets/switch.dart';
 
-class Home extends ConsumerStatefulWidget {
-  const Home({Key? key}) : super(key: key);
+class MainPage extends ConsumerStatefulWidget {
+  const MainPage({Key? key}) : super(key: key);
 
   @override
-  ConsumerState<Home> createState() => _HomeState();
+  ConsumerState<MainPage> createState() => _HomeState();
 }
 
-class _HomeState extends ConsumerState<Home>
+class _HomeState extends ConsumerState<MainPage>
     with SingleTickerProviderStateMixin {
   late HomeProvider _homeProvider;
   final ScrollController scrollController = ScrollController();
@@ -51,7 +51,7 @@ class _HomeState extends ConsumerState<Home>
                 SizedBox(
                   height: ScreenHelper.isDesktop(context) ? 30 : 20,
                 ),
-                Carousel(
+                Home(
                   key: _homeProvider.homeKey,
                 ),
                 const SizedBox(
@@ -170,7 +170,7 @@ class _HomeState extends ConsumerState<Home>
                                         theme: ref
                                             .read(themeProvider)
                                             .getCurrentTheme,
-                                        isReversed: false // default: false
+                                        isReversed: true // default: false
                                         );
                                   },
                                 ),

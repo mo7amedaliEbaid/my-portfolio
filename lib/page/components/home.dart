@@ -10,8 +10,8 @@ import '../../../utils/screen_helper.dart';
 import '../../provider/theme.dart';
 import 'home_item.dart';
 
-class Carousel extends StatelessWidget {
-  Carousel({Key? key}) : super(key: key);
+class Home extends StatelessWidget {
+  Home({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -86,9 +86,9 @@ Widget _buildDesktop(BuildContext context, Widget text, Widget image) {
           Expanded(
             child: text,
           ),
-          Expanded(
+         /* Expanded(
             child: image,
-          )
+          )*/
         ],
       ),
     ),
@@ -102,16 +102,16 @@ Widget _buildTablet(BuildContext context, Widget text, Widget image) {
       maxWidth: kTabletMaxWidth,
       minWidth: kTabletMaxWidth,
       defaultScale: false,
-      child: Row(
-        children: [
+      child: /*Row(
+        children: [*/
           Expanded(
             child: text,
           ),
-          Expanded(
+          /*Expanded(
             child: image,
-          )
-        ],
-      ),
+          )*/
+        //],
+     // ),
     ),
   );
 }
@@ -124,6 +124,6 @@ Widget _buildMobile(BuildContext context, Widget text, Widget image) {
       maxWidth: getMobileMaxWidth(context),
     ),
     width: double.infinity,
-    child: text,
+    child:Expanded(child: text) ,
   );
 }
