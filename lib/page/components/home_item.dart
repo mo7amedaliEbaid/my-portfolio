@@ -579,7 +579,6 @@ HomeItemModel homeItem(
             ),
           ),
     image: SizedBox.shrink(
-
         ),
   );
 }
