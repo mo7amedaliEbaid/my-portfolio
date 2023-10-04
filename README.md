@@ -8,8 +8,6 @@ Visit the website from here https://mo7amedaliebaid.github.io/
 ### Features
 - Multiple themes
 - Responsive Design (Mobile, Tablet, Desktop)
-- Contact Information
-- Links
 
 ### Dependencies
 - animated_theme_switcher:
