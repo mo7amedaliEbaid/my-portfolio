@@ -18,7 +18,6 @@ Visit the website from here https://mo7amedaliebaid.github.io/
 
 ### Dependencies
 - animated_theme_switcher:
-- carousel_slider:
 - google_fonts:
 - flutter_riverpod:
 - responsive_framework:
