@@ -88,10 +88,13 @@ class ProjectSection extends StatelessWidget {
                     ),
                     Text(
                       projectModel.description,
-                      style: const TextStyle(
-                        color: klightCaptionColor,
+                      style:  TextStyle(
+                        color: ref.watch(themeProvider).isDarkMode
+                            ? kdarkCaptionColor
+                            : klightCaptionColor,
                         height: 1.5,
                         fontSize: 15.0,
+                        fontWeight: FontWeight.bold,
                         overflow: TextOverflow.ellipsis,
 
                       ),

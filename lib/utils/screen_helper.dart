@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-interface class ScreenHelper extends StatelessWidget {
+ class ScreenHelper extends StatelessWidget {
   final Widget mobile;
   final Widget tablet;
   final Widget desktop;
