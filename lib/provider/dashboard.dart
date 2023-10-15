@@ -2,13 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:my_portfolio/models/header_item.dart';
 
-final homeProvider = ChangeNotifierProvider((ref) => HomeProvider());
+final dashboardProvider = ChangeNotifierProvider((ref) => DashboardProvider());
 
-class HomeProvider extends ChangeNotifier {
+class DashboardProvider extends ChangeNotifier {
   final contactKey = GlobalKey();
   final portfolioKey = GlobalKey();
-  final servicesKey = GlobalKey();
-  final skillsKey = GlobalKey();
   final homeKey = GlobalKey();
 
   Future<void> scrollToContact() async {
@@ -21,15 +19,9 @@ class HomeProvider extends ChangeNotifier {
     await _scroll(context);
   }
 
-  Future<void> scrollToService() async {
-    final context = servicesKey.currentContext;
-    await _scroll(context);
-  }
 
-  Future<void> scrollToSkills() async {
-    final context = skillsKey.currentContext;
-    await _scroll(context);
-  }
+
+
 
   Future<void> scrollToHome() async {
     final context = homeKey.currentContext;
@@ -51,12 +43,8 @@ class HomeProvider extends ChangeNotifier {
       scrollToContact();
     } else if (nameOnTap.title == "Home") {
       scrollToHome();
-    } else if (nameOnTap.title == "Services") {
-      scrollToService();
     } else if (nameOnTap.title == "Portfolio") {
       scrollToPortfolio();
-    } else if (nameOnTap.title == "Skills") {
-      scrollToSkills();
     }
   }
 }

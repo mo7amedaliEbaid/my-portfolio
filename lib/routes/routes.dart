@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:my_portfolio/page/page.dart';
 import 'package:my_portfolio/utils/constants.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
+import '../dashboard/dashboard.dart';
+
 class Routes {
   static const String initial = "/";
-  static const String demos = "/demos";
 }
 
 class RouterGenerator {
@@ -13,10 +13,10 @@ class RouterGenerator {
     switch (settings.name) {
       case Routes.initial:
         return _GeneratePageRoute(
-            widget: const MainPage(), routeName: settings.name);
+            widget:  const Dashboard(), routeName: settings.name);
       default:
         return _GeneratePageRoute(
-            widget: const MainPage(), routeName: settings.name);
+            widget: const Dashboard(), routeName: settings.name);
     }
   }
 }

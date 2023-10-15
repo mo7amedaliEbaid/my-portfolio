@@ -1,16 +1,10 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:my_portfolio/models/project.dart';
-import 'package:my_portfolio/provider/theme.dart';
-import 'package:my_portfolio/utils/constants.dart';
-import 'package:my_portfolio/utils/screen_helper.dart';
-import 'package:my_portfolio/utils/utils.dart';
+part of '../../dashboard.dart';
 
-class ProjectSection extends StatelessWidget {
+
+class _ProjectView extends StatelessWidget {
   final List<ProjectModel> projects;
 
-  const ProjectSection({Key? key, required this.projects}) : super(key: key);
+  const _ProjectView({Key? key, required this.projects}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -34,12 +28,12 @@ class ProjectSection extends StatelessWidget {
           runAlignment: WrapAlignment.center,
           children: projects
               .map((e) => Container(
-                  width:ScreenHelper.isMobile(context)?500: width * .32,
-                  margin: const EdgeInsets.symmetric(
-                    horizontal: 20,
-                    vertical: 15,
-                  ),
-                  child: _buildProject(width, e)))
+              width:ScreenHelper.isMobile(context)?500: width * .32,
+              margin: const EdgeInsets.symmetric(
+                horizontal: 20,
+                vertical: 15,
+              ),
+              child: _buildProject(width, e)))
               .toList(),
         ),
       ),
@@ -107,23 +101,23 @@ class ProjectSection extends StatelessWidget {
                     projectModel.techUsed.isEmpty
                         ? Container()
                         : Text(
-                            "Technologies Used",
-                            style: GoogleFonts.josefinSans(
-                              fontWeight: FontWeight.w900,
-                              fontSize: 16.0,
-                            ),
-                          ),
+                      "Technologies Used",
+                      style: GoogleFonts.josefinSans(
+                        fontWeight: FontWeight.w900,
+                        fontSize: 16.0,
+                      ),
+                    ),
                     Wrap(
                       children: projectModel.techUsed
                           .map((e) => Container(
-                                margin: const EdgeInsets.all(10),
-                                width: 25,
-                                color: e.logo == AppConstants.ubuntuImage
-                                    ? Colors.white
-                                    : null,
-                                height: 25,
-                                child: Image.asset(e.logo),
-                              ))
+                        margin: const EdgeInsets.all(10),
+                        width: 25,
+                        color: e.logo == AppConstants.ubuntuImage
+                            ? Colors.white
+                            : null,
+                        height: 25,
+                        child: Image.asset(e.logo),
+                      ))
                           .toList(),
                     ),
                     const SizedBox(

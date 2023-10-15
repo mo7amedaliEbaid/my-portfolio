@@ -22,19 +22,4 @@ class MouseProvider extends ChangeNotifier {
     notifyListeners();
     return _pressedAttentionIndex;
   }
-
-/*
-  bool _HoverState = false;
-
-  bool get isHovered => _HoverState ;
-
-
-  bool toggleHovering() {
-
-    notifyListeners();
-
-    _HoverState = !_HoverState;
-    return _HoverState;
-
-  }*/
 }

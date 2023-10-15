@@ -1,15 +1,5 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:my_portfolio/models/header_item.dart';
-import 'package:my_portfolio/provider/home.dart';
-import 'package:my_portfolio/provider/theme.dart';
-import 'package:my_portfolio/routes/routes.dart';
-import 'package:my_portfolio/utils/constants.dart';
-import 'package:my_portfolio/utils/globals.dart';
-import 'package:my_portfolio/utils/screen_helper.dart';
-import 'package:my_portfolio/utils/utils.dart';
-import 'package:responsive_framework/responsive_framework.dart';
+part of '../dashboard.dart';
+
 
 class HeaderLogo extends StatelessWidget {
   const HeaderLogo({Key? key}) : super(key: key);
@@ -78,16 +68,6 @@ class HeaderRow extends StatelessWidget {
           onTap: () {},
         ),
         NameOnTap(
-          title: "Skills",
-          onTap: () {},
-          iconData: Icons.info,
-        ),
-        NameOnTap(
-          title: "Services",
-          onTap: () {},
-          iconData: Icons.school,
-        ),
-        NameOnTap(
           title: "Portfolio",
           onTap: () {},
           iconData: Icons.work,
@@ -97,21 +77,6 @@ class HeaderRow extends StatelessWidget {
           onTap: () {},
           iconData: Icons.contact_mail,
         ),
-       /* NameOnTap(
-          title: "Blogs",
-          onTap: () {
-            Utilty.openUrl(AppConstants.mediumUrl);
-          },
-          iconData: Icons.article,
-        ),
-        NameOnTap(
-          title: "Themes",
-          onTap: () {
-            Utilty.openUrl(AppConstants.mediumUrl);
-          },
-          iconData: Icons.light_mode_outlined,
-          isDarkTheme: true,
-        ),*/
       ];
 
   @override
@@ -135,16 +100,13 @@ class HeaderRow extends StatelessWidget {
                             child: GestureDetector(
                               onTap: () {
                                 item.onTap();
-                                HomeProvider _homeProvider =
-                                    ref.read(homeProvider);
-                                _homeProvider.scrollBasedOnHeader(item);
+                                DashboardProvider _dashboardprovider =
+                                    ref.read(dashboardProvider);
+                                _dashboardprovider.scrollBasedOnHeader(item);
                               },
                               child: Text(
                                 item.title,
                                 style: TextStyle(
-                                  color: item.title == "Blogs"
-                                      ? kPrimaryColor
-                                      : null,
                                   fontSize: 14.0,
                                   fontWeight: FontWeight.bold,
                                   letterSpacing: 2,

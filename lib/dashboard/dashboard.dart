@@ -3,33 +3,49 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:my_portfolio/models/project.dart';
-import 'package:my_portfolio/page/components/flutter_skills.dart';
-import 'package:my_portfolio/page/components/home.dart';
-import 'package:my_portfolio/page/components/footer.dart';
-import 'package:my_portfolio/page/components/header.dart';
-import 'package:my_portfolio/page/components/project.dart';
-import 'package:my_portfolio/page/components/service.dart';
-import 'package:my_portfolio/provider/home.dart';
+
+import 'package:my_portfolio/provider/dashboard.dart';
 import 'package:my_portfolio/provider/theme.dart';
 import 'package:my_portfolio/utils/globals.dart';
 import 'package:my_portfolio/utils/screen_helper.dart';
 import 'package:my_portfolio/widgets/switch.dart';
+import 'package:responsive_framework/responsive_value.dart';
+import 'package:responsive_framework/responsive_wrapper.dart';
 
-class MainPage extends ConsumerStatefulWidget {
-  const MainPage({Key? key}) : super(key: key);
+import '../models/footer_item.dart';
+import '../models/header_item.dart';
+import '../models/technology.dart';
+import '../provider/mouse.dart';
+import '../routes/routes.dart';
+import '../utils/constants.dart';
+import '../utils/utils.dart';
+
+
+part 'views/_home_view/_home_view.dart';
+part 'views/_home_view/_desktop.dart';
+part 'views/_home_view/_mobile.dart';
+part 'views/_home_view/_tablet.dart';
+
+part 'views/_project_view/_project_view.dart';
+
+part 'components/_footer.dart';
+part 'components/_header.dart';
+
+class Dashboard extends ConsumerStatefulWidget {
+  const Dashboard({Key? key}) : super(key: key);
 
   @override
-  ConsumerState<MainPage> createState() => _HomeState();
+  ConsumerState<Dashboard> createState() => _DashboardState();
 }
 
-class _HomeState extends ConsumerState<MainPage>
+class _DashboardState extends ConsumerState<Dashboard>
     with SingleTickerProviderStateMixin {
-  late HomeProvider _homeProvider;
+  late DashboardProvider _dashboardprovider;
   final ScrollController scrollController = ScrollController();
 
   @override
   void initState() {
-    _homeProvider = ref.read(homeProvider);
+    _dashboardprovider = ref.read(dashboardProvider);
     super.initState();
   }
 
@@ -38,7 +54,7 @@ class _HomeState extends ConsumerState<MainPage>
     super.dispose();
   }
 
-  Widget _buildPage() {
+  Widget _buildView() {
     return Stack(
       children: [
         ScrollConfiguration(
@@ -51,20 +67,14 @@ class _HomeState extends ConsumerState<MainPage>
                 SizedBox(
                   height: ScreenHelper.isDesktop(context) ? 30 : 20,
                 ),
-                Home(
-                  key: _homeProvider.homeKey,
+                _HomeView(
+                  key: _dashboardprovider.homeKey,
                 ),
                 const SizedBox(
                   height: 20.0,
                 ),
-                FlutterSkillsSection(
-                  key: _homeProvider.skillsKey,
-                ),
-                ServiceSection(
-                  key: _homeProvider.servicesKey,
-                ),
                 SizedBox(
-                  key: _homeProvider.portfolioKey,
+                  key: _dashboardprovider.portfolioKey,
                   height: 100.0,
                 ),
                 Center(
@@ -94,14 +104,14 @@ class _HomeState extends ConsumerState<MainPage>
                     )
                   ],
                 )),
-                ProjectSection(
+                _ProjectView(
                   projects: ProjectModel.projects
                 ),
                 const SizedBox(
                   height: 50.0,
                 ),
-                Footer(
-                  key: _homeProvider.contactKey,
+                _Footer(
+                  key: _dashboardprovider.contactKey,
                 )
               ],
             ),
@@ -146,7 +156,7 @@ class _HomeState extends ConsumerState<MainPage>
                       if (Globals.scaffoldKey.currentState != null) {
                         if (Globals.scaffoldKey.currentState!.isEndDrawerOpen) {
                           Navigator.pop(context);
-                          _homeProvider.scrollBasedOnHeader(
+                          _dashboardprovider.scrollBasedOnHeader(
                               HeaderRow.headerItems[index]);
                         }
                       }
@@ -189,7 +199,7 @@ class _HomeState extends ConsumerState<MainPage>
             ),
           ),
         ),
-        body: _buildPage(),
+        body: _buildView(),
       ),
     );
   }
