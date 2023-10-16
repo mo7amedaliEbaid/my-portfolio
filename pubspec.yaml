@@ -14,7 +14,6 @@ dependencies:
     sdk: flutter
 
   cupertino_icons: ^1.0.2
-  lottie: ^2.6.0
   animated_theme_switcher: ^2.0.6
   google_fonts: ^5.1.0
   flutter_riverpod: ^1.0.3
@@ -37,7 +36,6 @@ flutter:
   assets:
     - assets/images/social/
     - assets/images/technology/
-    - assets/images/statemanagement/
     - assets/images/
     - assets/lotties/
 

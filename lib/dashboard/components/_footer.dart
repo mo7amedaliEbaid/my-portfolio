@@ -110,16 +110,16 @@ Widget _buildUi(double width, BuildContext context) {
                                       children: [
                                         TextSpan(
                                           text: "${footerItem.text1}\n",
-                                          style: const TextStyle(
-                                            color: klightCaptionColor,
+                                          style:  TextStyle(
                                             height: 1.8,
+                                              color: Colors.green.shade400
                                           ),
                                         ),
                                         TextSpan(
                                           text: "${footerItem.text2}\n",
-                                          style: const TextStyle(
-                                            color: klightCaptionColor,
-                                          ),
+                                          style: TextStyle(
+                                            color: Colors.green.shade400
+                                          )
                                         )
                                       ],
                                     ),

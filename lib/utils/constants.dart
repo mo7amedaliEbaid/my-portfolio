@@ -16,8 +16,7 @@ double getMobileMaxWidth(BuildContext context) =>
 
 sealed class AppConstants {
 
-  static const String backgroundLottie1="assets/lotties/background1.json";
-  static const String backgroundLottie="assets/lotties/background.json";
+
 
   static const linkedInUrl = "https://www.linkedin.com/in/mo7amedebaid/";
   static const youtubeUrl = "https://youtube.com/@user-tb3pp4zo9o?si=qn_jL-HBDcVy4WG5";
@@ -28,16 +27,12 @@ sealed class AppConstants {
 
 
   static const _assets = "assets/";
-  static const _outputs = "outputs/";
 
-  static const _svg = _assets + "svg/";
-  static const guySvg = _svg + "guy.svg";
-  static const personSvg = _svg + "person.svg";
+
 
   static const _images = _assets + "images/";
 
   static const profileimg = _images + "profile.jpg";
-  static const profile1img = _images + "profile1.jpg";
 
   static const _socialImages = _images + "social/";
   static const emailImage = _socialImages + "gmail.png";
@@ -69,57 +64,6 @@ sealed class AppConstants {
   static const figmaImage = _techImages + "figma.png";
   static const windowsImage = _techImages + "windows.png";
 
-  static const _stateImages = _images + "statemanagement/";
-  static const blocImage = _stateImages + "bloc.png";
-  static const getxImage = _stateImages + "getx.png";
-  static const providerImage = _stateImages + "provider.png";
-  static const riverpodImage = _stateImages + "riverpod.png";
-
-
-
-
-  static List<String> firebaseSkills = [
-    "Firebase Auth",
-    "Cloud Firestore",
-    "Firebase Storage",
-    "Cloud Messaging",
-    "Realtime Database",
-    "Firebase Analytics"
-  ];
-
-  static List<String> databases = [
-    "Sqflite",
-    "Hive",
-    "Get Storage",
-    "Drift",
-    "Floor",
-    "Isar",
-    "Objectbox"
-  ];
-
-  static List<String> commonpackages = [
-    "Localization",
-    "Local Notifications",
-    "Http",
-    "Dio",
-    "Geolocator",
-    "Google Maps",
-    "SharedPreferences",
-    "Connectivity Plus",
-    "Url Launcher",
-    "Freezed",
-    "Just audio",
-    "Image Picker",
-    "Permission Handler",
-    "Share Plus",
-    "Agora Rtc Engine",
-    "Webview Flutter",
-    "Video Player",
-    "Go Router",
-    "Device Info Plus",
-    "Json Serializable",
-    "Screenutil"
-  ];
 
   static List<NameOnTap> socialLoginDatas = [
     NameOnTap(

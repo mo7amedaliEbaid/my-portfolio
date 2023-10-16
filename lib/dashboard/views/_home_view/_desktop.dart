@@ -27,102 +27,106 @@ class _DesktopHomeView extends StatelessWidget {
                       Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                              Flexible(
-                                flex: 2,
-                                child:  Text(
-                                "Mohamed Ali".toUpperCase(),
-                                style: GoogleFonts.josefinSans(
-                                  fontSize: 40.0,
-                                  fontWeight: FontWeight.w900,
-                                  height: 1.3,
-                                  letterSpacing: 2.3,
-                                ),
-                              ),),
-                         Flexible(child: const SizedBox(
-                           height: 10.0,
-                         ),),
-
+                          Flexible(
+                            flex: 2,
+                            child: Text(
+                              "Mohamed Ali".toUpperCase(),
+                              style: GoogleFonts.josefinSans(
+                                fontSize: 40.0,
+                                fontWeight: FontWeight.w900,
+                                height: 1.3,
+                                letterSpacing: 2.3,
+                              ),
+                            ),
+                          ),
+                          Flexible(
+                            child: const SizedBox(
+                              height: 10.0,
+                            ),
+                          ),
                           Flexible(
                             flex: 2,
                             child: Row(
-                            children: [
-                              Text(
-                                "Software Engineer, ",
-                                style: TextStyle(
-                                    color: ref.watch(themeProvider).isDarkMode
-                                        ? kdarkCaptionColor
-                                        : klightCaptionColor,
-                                    fontSize: 20.0,
-                                    height: 1.0,
-                                    fontWeight: FontWeight.bold),
-                              ),
-                              SizedBox(
-                                width: 20,
-                              ),
-                              Icon(
-                                Icons.location_on,
-                                color: ref.watch(themeProvider).isDarkMode
-                                    ? kdarkCaptionColor
-                                    : klightCaptionColor,
-                                size: 24,
-                              ),
-                              SizedBox(
-                                width: 2,
-                              ),
-                              Text(
-                                "Cairo",
-                                style: TextStyle(
-                                    color: ref.watch(themeProvider).isDarkMode
-                                        ? kdarkCaptionColor
-                                        : klightCaptionColor,
-                                    fontSize: 20.0,
-                                    height: 1.0,
-                                    fontWeight: FontWeight.bold),
-                              )
-                            ],
-                          ),),
-
+                              children: [
+                                Text(
+                                  "Software Engineer, ",
+                                  style: TextStyle(
+                                      color: ref.watch(themeProvider).isDarkMode
+                                          ? kdarkCaptionColor
+                                          : klightCaptionColor,
+                                      fontSize: 20.0,
+                                      height: 1.0,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                                SizedBox(
+                                  width: 20,
+                                ),
+                                Icon(
+                                  Icons.location_on,
+                                  color: ref.watch(themeProvider).isDarkMode
+                                      ? kdarkCaptionColor
+                                      : klightCaptionColor,
+                                  size: 24,
+                                ),
+                                SizedBox(
+                                  width: 2,
+                                ),
+                                Text(
+                                  "Cairo",
+                                  style: TextStyle(
+                                      color: ref.watch(themeProvider).isDarkMode
+                                          ? kdarkCaptionColor
+                                          : klightCaptionColor,
+                                      fontSize: 20.0,
+                                      height: 1.0,
+                                      fontWeight: FontWeight.bold),
+                                )
+                              ],
+                            ),
+                          ),
                           const SizedBox(
                             height: 10.0,
                           ),
-                          Flexible(flex: 2,  child:  Row(
-                            children: [
-                              Text(
-                                "26 Years Old",
-                                style: TextStyle(
+                          Flexible(
+                            flex: 2,
+                            child: Row(
+                              children: [
+                                Text(
+                                  "26 Years Old",
+                                  style: TextStyle(
+                                    color: ref.watch(themeProvider).isDarkMode
+                                        ? kdarkCaptionColor
+                                        : klightCaptionColor,
+                                    fontSize: 20.0,
+                                    height: 1.0,
+                                  ),
+                                ),
+                                const SizedBox(
+                                  width: 10,
+                                ),
+                                Icon(
+                                  Icons.man,
                                   color: ref.watch(themeProvider).isDarkMode
                                       ? kdarkCaptionColor
                                       : klightCaptionColor,
-                                  fontSize: 20.0,
-                                  height: 1.0,
+                                  size: 24,
                                 ),
-                              ),
-                              const SizedBox(
-                                width: 10,
-                              ),
-                              Icon(
-                                Icons.man,
-                                color: ref.watch(themeProvider).isDarkMode
-                                    ? kdarkCaptionColor
-                                    : klightCaptionColor,
-                                size: 24,
-                              ),
-                              SizedBox(
-                                width: 2,
-                              ),
-                              Text(
-                                "Male",
-                                style: TextStyle(
-                                  color: ref.watch(themeProvider).isDarkMode
-                                      ? kdarkCaptionColor
-                                      : klightCaptionColor,
-                                  fontSize: 20.0,
-                                  height: 1.0,
+                                SizedBox(
+                                  width: 2,
                                 ),
-                              )
-                            ],
-                          ),)
-
+                                Text(
+                                  "Male",
+                                  style: TextStyle(
+                                    color: ref.watch(themeProvider).isDarkMode
+                                        ? kdarkCaptionColor
+                                        : klightCaptionColor,
+                                    fontSize: 20.0,
+                                    height: 1.0,
+                                  ),
+                                )
+                              ],
+                            ),
+                          )
                         ],
                       ),
                       Container(

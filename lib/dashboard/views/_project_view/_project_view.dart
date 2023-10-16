@@ -55,7 +55,7 @@ class _ProjectView extends StatelessWidget {
                   borderRadius: BorderRadius.circular(5)),
               child: Center(
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Text(
@@ -83,23 +83,19 @@ class _ProjectView extends StatelessWidget {
                     Text(
                       projectModel.description,
                       style:  TextStyle(
-                        color: ref.watch(themeProvider).isDarkMode
-                            ? kdarkCaptionColor
-                            : klightCaptionColor,
-                        height: 1.5,
-                        fontSize: 15.0,
+                        fontSize: 17.0,
                         fontWeight: FontWeight.bold,
                         overflow: TextOverflow.ellipsis,
-
+                      height: 1.5
                       ),
-                      textAlign: TextAlign.justify,
+                      textAlign: TextAlign.start,
                       maxLines: 3,
                     ),
                     const SizedBox(
                       height: 20.0,
                     ),
                     projectModel.techUsed.isEmpty
-                        ? Container()
+                        ? SizedBox.shrink()
                         : Text(
                       "Technologies Used",
                       style: GoogleFonts.josefinSans(
@@ -112,16 +108,13 @@ class _ProjectView extends StatelessWidget {
                           .map((e) => Container(
                         margin: const EdgeInsets.all(10),
                         width: 25,
-                        color: e.logo == AppConstants.ubuntuImage
-                            ? Colors.white
-                            : null,
                         height: 25,
                         child: Image.asset(e.logo),
                       ))
                           .toList(),
                     ),
                     const SizedBox(
-                      height: 25.0,
+                      height: 15.0,
                     ),
                     MouseRegion(
                       cursor: SystemMouseCursors.click,

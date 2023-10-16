@@ -31,10 +31,10 @@ class ProjectModel {
       buttonText: "Github Link",
     ),
     ProjectModel(
-      project: "Flutter App",
-      title: "Alpha Store",
-      description: "Alpha Store is a Flutter app for hyper, multi-categories market to display products, manage sales and orders.",
-      projectLink: "https://github.com/mo7amedaliEbaid/Ecommerce-Flutter",
+      project: "Flutter Project",
+      title: "Kafka",
+      description: "Fully functional website working perfectly in flutter application for the books and quotes of Franz Kafka.",
+      projectLink: "https://github.com/mo7amedaliEbaid/kafka",
       techUsed: [
         TechnologyConstants.flutter,
         TechnologyConstants.dart,
@@ -44,24 +44,22 @@ class ProjectModel {
 
     ProjectModel(
       project: "Flutter App",
-      title: "Easy Chat",
+      title: "Movies App",
       description:
-      "Easy Chat is a flutter app for Online Messaging ( Textual, Images ), Group Chats and Video Calls. It is backed by Firebase and Agora platform.",
-      projectLink: "https://github.com/mo7amedaliEbaid/easy-chat",
+      "Movies application based on TMDB api, built with clean architecture and riverpod state management.",
+      projectLink: "https://github.com/mo7amedaliEbaid/movies_riverpod",
       techUsed: [
         TechnologyConstants.flutter,
-        TechnologyConstants.firebase,
-        TechnologyConstants.agora,
         TechnologyConstants.dart,
       ],
       buttonText: "Github Link",
     ),
     ProjectModel(
-      project: "Flutter App",
-      title: "Housing Organizer",
+      project: "Flutter Project",
+      title: "Color Selector",
       description:
-      "A Flutter App for organizing real estates selling and renting, The user can make a post about his product or buy from what is available.",
-      projectLink: "https://github.com/mo7amedaliEbaid/housing-organizer",
+      "Fully functional color picker website working perfectly in flutter application, to get the HEX, RGB, HSV and HSL of any color, extract a color from any image.",
+      projectLink: "https://github.com/mo7amedaliEbaid/Color-Selector",
       techUsed: [
         TechnologyConstants.flutter,
         TechnologyConstants.dart,
@@ -73,7 +71,7 @@ class ProjectModel {
       project: "Flutter Project",
       title: "News Wire",
       description:
-      "A complete news website working perfectly in flutter application. Multiple themes, search functionality, 3D navigation and much more..",
+      "A complete news website working perfectly in flutter application. Multiple themes, search functionality, Responsive Design, Data Caching, 3D navigation and much more..",
       projectLink: "https://github.com/mo7amedaliEbaid/news-wire",
       techUsed: [
         TechnologyConstants.flutter,
@@ -82,11 +80,11 @@ class ProjectModel {
       buttonText: "Github Link",
     ),
     ProjectModel(
-      project: "Flutter Project",
-      title: "Phones Shop",
+      project: "Flutter App",
+      title: "Online Shop",
       description:
-      "Phones Shop is a fully functional website working perfectly in flutter application. The user can buy phones or post phones for sale.",
-      projectLink: "https://github.com/mo7amedaliEbaid/phones-shop-web-app-firebase",
+      "By using firebase as a backend, I developed a flutter app for shoping online, Cart, Paymob Integration and Google maps are provided.",
+      projectLink: "https://github.com/mo7amedaliEbaid/online-shop",
       techUsed: [
         TechnologyConstants.flutter,
         TechnologyConstants.firebase,
@@ -97,10 +95,10 @@ class ProjectModel {
 
     ProjectModel(
       project: "Flutter App",
-      title: "Coffee Shop",
+      title: "Beautify",
       description:
-      "A Flutter app to display products ,manage orders and sales of a coffee shop, It is based on local database, Cart and contact us screens are provided...",
-      projectLink: "https://github.com/mo7amedaliEbaid/Coffee-Shop-Getx",
+      "Beautify is a flutter e-commerce app built using MVVM architecture pattern for displaying makeup products ,managing user's orders and sales , Cart, Search functionality are provided.",
+      projectLink: "https://github.com/mo7amedaliEbaid/beautify",
       techUsed: [
         TechnologyConstants.flutter,
         TechnologyConstants.dart,
