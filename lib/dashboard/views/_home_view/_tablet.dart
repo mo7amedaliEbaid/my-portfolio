@@ -1,7 +1,8 @@
 part of '../../dashboard.dart';
 
 class _TabletHomeView extends StatelessWidget {
-  const _TabletHomeView({ required this.containerHeight, required this.ref});
+  const _TabletHomeView({required this.containerHeight, required this.ref});
+
   final double containerHeight;
   final WidgetRef ref;
 
@@ -9,133 +10,128 @@ class _TabletHomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       height: containerHeight,
-      child: Center(
+      child: Padding(padding: EdgeInsets.symmetric(horizontal: 50),
+      child:    Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisSize: MainAxisSize.max,
-          children: [
-            Expanded(
-              flex: 100,
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisSize: MainAxisSize.max,
+        children: [
+          Flexible(
+            flex: 2,
+            child: const SizedBox(
+              height: 55.0,
+            ),
+          ),
+          Flexible(
+            flex: 1,
+            child: Text(
+              "Mohamed Ali".toUpperCase(),
+              style: GoogleFonts.josefinSans(
+                fontSize: 24.0,
+                fontWeight: FontWeight.w900,
+                height: 1.3,
+                letterSpacing: 2.3,
+              ),
+            ),
+          ),
+          Flexible(
+            flex: 1,
+            child: const SizedBox(
+              height: 15.0,
+            ),
+          ),
+          Flexible(
+              flex: 1,
               child: Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        "Flutter Developer",
-                        style: GoogleFonts.josefinSans(
-                          color: kPrimaryColor,
-                          fontWeight: FontWeight.w900,
-                          fontSize: 20.0,
-                          letterSpacing: 2,
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 18.0,
-                      ),
-                      Text(
-                        "Mohamed Ali".toUpperCase(),
-                        style: GoogleFonts.josefinSans(
-                          fontSize: 40.0,
-                          fontWeight: FontWeight.w900,
-                          height: 1.3,
-                          letterSpacing: 2.3,
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 10.0,
-                      ),
-                      Row(
-                        children: [
-                          Text(
-                            "Software Engineer, ",
-                            style: TextStyle(
-                                color: ref.watch(themeProvider).isDarkMode
-                                    ? kdarkCaptionColor
-                                    : klightCaptionColor,
-                                fontSize: 20.0,
-                                height: 1.0,
-                                fontWeight: FontWeight.bold),
-                          ),
-                          SizedBox(
-                            width: 20,
-                          ),
-                          Icon(
-                            Icons.location_on,
-                            color: ref.watch(themeProvider).isDarkMode
-                                ? kdarkCaptionColor
-                                : klightCaptionColor,
-                            size: 24,
-                          ),
-                          SizedBox(
-                            width: 2,
-                          ),
-                          Text(
-                            "Cairo",
-                            style: TextStyle(
-                                color: ref.watch(themeProvider).isDarkMode
-                                    ? kdarkCaptionColor
-                                    : klightCaptionColor,
-                                fontSize: 20.0,
-                                height: 1.0,
-                                fontWeight: FontWeight.bold),
-                          )
-                        ],
-                      ),
-                      const SizedBox(
-                        height: 10.0,
-                      ),
-                      Row(
-                        children: [
-                          Text(
-                            "26 Years Old",
-                            style: TextStyle(
-                              color: ref.watch(themeProvider).isDarkMode
-                                  ? kdarkCaptionColor
-                                  : klightCaptionColor,
-                              fontSize: 20.0,
-                              height: 1.0,
-                            ),
-                          ),
-                          SizedBox(
-                            width: 10,
-                          ),
-                          Icon(
-                            Icons.man,
-                            color: ref.watch(themeProvider).isDarkMode
-                                ? kdarkCaptionColor
-                                : klightCaptionColor,
-                            size: 24,
-                          ),
-                          SizedBox(
-                            width: 2,
-                          ),
-                          Text(
-                            "Male",
-                            style: TextStyle(
-                              color: ref.watch(themeProvider).isDarkMode
-                                  ? kdarkCaptionColor
-                                  : klightCaptionColor,
-                              fontSize: 20.0,
-                              height: 1.0,
-                            ),
-                          )
-                        ],
-                      ),
-                    ],
+                  Text(
+                    "Software Engineer ",
+                    style: TextStyle(
+                        color: ref.watch(themeProvider).isDarkMode
+                            ? kdarkCaptionColor
+                            : klightCaptionColor,
+                        fontSize: 20.0,
+                        height: 1.0,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  SizedBox(
+                    width: 15,
+                  ),
+                  Text(
+                    "26 Years Old",
+                    style: TextStyle(
+                        color: ref.watch(themeProvider).isDarkMode
+                            ? kdarkCaptionColor
+                            : klightCaptionColor,
+                        fontSize: 20.0,
+                        height: 1.0,
+                        fontWeight: FontWeight.bold),
                   ),
                 ],
-              ),
+              )),
+          Flexible( flex: 1, child: SizedBox(height: 10,)),
+          Flexible(
+            flex: 1,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(
+                  Icons.location_on,
+                  color: ref.watch(themeProvider).isDarkMode
+                      ? kdarkCaptionColor
+                      : klightCaptionColor,
+                  size: 24,
+                ),
+                SizedBox(
+                  width: 2,
+                ),
+                Text(
+                  "Cairo",
+                  style: TextStyle(
+                      color: ref.watch(themeProvider).isDarkMode
+                          ? kdarkCaptionColor
+                          : klightCaptionColor,
+                      fontSize: 20.0,
+                      height: 1.0,
+                      fontWeight: FontWeight.bold),
+                ),
+                SizedBox(
+                  width: 45,
+                ),
+                Icon(
+                  Icons.man,
+                  color: ref.watch(themeProvider).isDarkMode
+                      ? kdarkCaptionColor
+                      : klightCaptionColor,
+                  size: 24,
+                ),
+                SizedBox(
+                  width: 2,
+                ),
+                Text(
+                  "Male",
+                  style: TextStyle(
+                      color: ref.watch(themeProvider).isDarkMode
+                          ? kdarkCaptionColor
+                          : klightCaptionColor,
+                      fontSize: 20.0,
+                      height: 1.0,
+                      fontWeight: FontWeight.bold),
+                )
+              ],
             ),
-            const Expanded(
-              child: const SizedBox(
-                height: 15.0,
-              ),
+          ),
+          Flexible(
+            flex: 1,
+            child: const SizedBox(
+              height: 25.0,
             ),
-            Consumer(builder: (context, mouseref, _) {
+          ),
+          Flexible(
+            flex: 2,
+            child: Consumer(builder: (context, mouseref, _) {
               return SizedBox(
                 height: 50,
                 child: ListView.builder(
@@ -182,109 +178,123 @@ class _TabletHomeView extends StatelessWidget {
                     }),
               );
             }),
-            const Expanded(
-              child: SizedBox(
-                height: 15.0,
-              ),
+          ),
+          Flexible(
+            flex: 1,
+            child: SizedBox(
+              height: 15.0,
             ),
-            Text(
-              "I'm Mohamed Ali, A Flutter Developer",
-              style: GoogleFonts.josefinSans(
-                fontWeight: FontWeight.bold,
-                height: 1.3,
-                fontSize: 24.0,
-              ),
-            ),
-            const SizedBox(
-              height: 10.0,
-            ),
-            Text(
-              "I have graduated from faculty of engineering in 2021. I have been developing Flutter Apps for more than 2 years now.",
-              style: TextStyle(
-                  color: ref.watch(themeProvider).isDarkMode
-                      ? kdarkCaptionColor
-                      : klightCaptionColor,
-                  height: 1.5,
-                  fontSize: 19,
-                  fontWeight: FontWeight.bold),
-            ),
-            const Expanded(
-              child: SizedBox(
-                height: 30.0,
-              ),
-            ),
-            const Padding(
-              padding: EdgeInsets.only(top: 18.0),
+          ),
+          Flexible(
+              flex: 1,
               child: Text(
-                "Technologies I have worked with",
-                style: TextStyle(
-                  fontSize: 24,
+                "I'm Mohamed Ali, A Flutter Developer",
+                style: GoogleFonts.josefinSans(
                   fontWeight: FontWeight.bold,
+                  height: 1.3,
+                  fontSize: 22.0,
                 ),
+              )),
+          Flexible(
+              flex: 1,
+              child: const SizedBox(
+                height: 15.0,
+              )),
+          Flexible(
+            flex: 2,
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 25),
+              child: Text(
+                "I have graduated from faculty of engineering in 2021. I have been developing Flutter Apps for more than 2 years now.",
+                style: TextStyle(
+                    color: ref.watch(themeProvider).isDarkMode
+                        ? kdarkCaptionColor
+                        : klightCaptionColor,
+                    height: 1.5,
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold),
+                textAlign: TextAlign.center,
               ),
             ),
-            const Expanded(
-              child: SizedBox(
-                height: 20.0,
+          ),
+          Flexible(
+            flex: 1,
+            child: SizedBox(
+              height: 30.0,
+            ),
+          ),
+          Flexible(
+            flex: 1,
+            child: Text(
+              "Technologies I have worked with",
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
               ),
             ),
-            Expanded(
-                flex: 100,
+          ),
+          Flexible(
+            flex: 1,
+            child: SizedBox(
+              height: 20.0,
+            ),
+          ),
+          Flexible(
+            flex: 5,
+            child: Wrap(
+              direction: Axis.horizontal,
+              children: TechnologyConstants.technologyLearned
+                  .map((e) => MouseRegion(
+                cursor: SystemMouseCursors.alias,
                 child: Container(
-                  margin: EdgeInsets.fromLTRB(0, 20, 0, 0),
-                  child: Wrap(
-                    direction: Axis.horizontal,
-                    children: TechnologyConstants.technologyLearned
-                        .map((e) => MouseRegion(
-                      cursor: SystemMouseCursors.alias,
-                      child: Container(
-                        width: 100,
-                        height: 50,
-                        decoration: BoxDecoration(
-                          color: ref.watch(themeProvider).isDarkMode
-                              ? Colors.grey[800]
-                              : Colors.grey[200],
-                          borderRadius: BorderRadius.circular(4.0),
+                  width: 120,
+                  height: 50,
+                  decoration: BoxDecoration(
+                    color: ref.watch(themeProvider).isDarkMode
+                        ? Colors.grey[800]
+                        : Colors.grey[200],
+                    borderRadius: BorderRadius.circular(4.0),
+                  ),
+                  margin: const EdgeInsets.symmetric(
+                      horizontal: 5, vertical: 5),
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: 8.0, vertical: 6),
+                  child: Center(
+                    child: Row(
+                      children: [
+                        SizedBox(
+                            width: 20,
+                            height: 20,
+                            child: Image.asset(e.logo)),
+                        SizedBox(
+                          width: 5,
                         ),
-                        margin: const EdgeInsets.symmetric(
-                            horizontal: 5, vertical: 5),
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 8.0, vertical: 6),
-                        child: InkWell(
-                          onTap: () {},
-                          child: Center(
-                            child: Row(
-                              children: [
-                                SizedBox(
-                                    width: 20,
-                                    height: 20,
-                                    child: Image.asset(e.logo)),
-                                SizedBox(
-                                  width: 5,
-                                ),
-                                Container(
-                                  width: 52,
-                                  child: Text(
-                                    e.name,
-                                    overflow: TextOverflow.ellipsis,
-                                    style: TextStyle(
-                                      fontSize: 15,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                ),
-                              ],
+                        Container(
+                          width: 72,
+                          child: Text(
+                            e.name,
+                            overflow: TextOverflow.ellipsis,
+                            style: TextStyle(
+                              fontSize: 15,
+                              fontWeight: FontWeight.bold,
                             ),
                           ),
                         ),
-                      ),
-                    ))
-                        .toList(),
+                      ],
+                    ),
                   ),
-                )),
-          ],
-        ),
+                ),
+              ))
+                  .toList(),
+            ),
+          ),
+        ],
       ),
+    ),
+
+      )
+
+
     );
   }
 }

@@ -6,7 +6,7 @@ class _HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double containerHeight = MediaQuery.of(context).size.height *
-        (ScreenHelper.isMobile(context) ? .7 : .85);
+        (ScreenHelper.isMobile(context) ? .92 : .85);
     return Consumer(builder: (context, ref, _) {
       return SizedBox(
         height: containerHeight,

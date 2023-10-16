@@ -1,4 +1,4 @@
-import 'dart:developer';
+//import 'dart:developer';
 
 import 'package:animated_theme_switcher/animated_theme_switcher.dart';
 import 'package:flutter/material.dart';
@@ -11,8 +11,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    log(MediaQuery.sizeOf(context).height.toString());
-    log(MediaQuery.sizeOf(context).width.toString());
+  //  log(MediaQuery.sizeOf(context).height.toString());
+   // log(MediaQuery.sizeOf(context).width.toString());
     return Consumer(
       builder: (context, ref, _) {
         return ThemeProvider(
