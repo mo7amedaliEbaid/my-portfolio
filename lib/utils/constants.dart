@@ -19,7 +19,7 @@ sealed class AppConstants {
 
 
   static const linkedInUrl = "https://www.linkedin.com/in/mo7amedebaid/";
-  static const youtubeUrl = "https://youtube.com/@user-tb3pp4zo9o?si=qn_jL-HBDcVy4WG5";
+  static const youtubeUrl = "https://www.youtube.com/channel/UCcaLYqe9DJGdqexSQSIgs7w";
   static const githubUrl = "https://github.com/mo7amedaliEbaid";
   static const facebookUrl = "https://www.facebook.com/mohamed.ebied.980/";
   static const leetcodeUrl = "https://leetcode.com/mo7amedaliebaid/";
