@@ -24,7 +24,7 @@ class _TabletHomeView extends StatelessWidget {
             ),
           ),
           Flexible(
-            flex: 1,
+            flex: 2,
             child: Text(
               "Mohamed Ali".toUpperCase(),
               style: GoogleFonts.josefinSans(
@@ -130,7 +130,7 @@ class _TabletHomeView extends StatelessWidget {
             ),
           ),
           Flexible(
-            flex: 2,
+            flex: 3,
             child: Consumer(builder: (context, mouseref, _) {
               return SizedBox(
                 height: 50,
@@ -186,7 +186,7 @@ class _TabletHomeView extends StatelessWidget {
             ),
           ),
           Flexible(
-              flex: 1,
+              flex: 2,
               child: Text(
                 "I'm Mohamed Ali, A Flutter Developer",
                 style: GoogleFonts.josefinSans(
@@ -201,7 +201,7 @@ class _TabletHomeView extends StatelessWidget {
                 height: 15.0,
               )),
           Flexible(
-            flex: 2,
+            flex: 3,
             child: Padding(
               padding: EdgeInsets.symmetric(horizontal: 25),
               child: Text(
