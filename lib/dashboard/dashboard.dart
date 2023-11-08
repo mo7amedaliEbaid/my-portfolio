@@ -17,6 +17,7 @@ import '../models/header_item.dart';
 import '../models/technology.dart';
 import '../provider/mouse.dart';
 import '../routes/routes.dart';
+import '../unsupported_screen.dart';
 import '../utils/constants.dart';
 import '../utils/utils.dart';
 

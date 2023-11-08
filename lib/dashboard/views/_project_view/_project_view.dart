@@ -80,15 +80,16 @@ class _ProjectView extends StatelessWidget {
                     const SizedBox(
                       height: 10.0,
                     ),
+
                     Text(
                       projectModel.description,
-                      style:  TextStyle(
-                        fontSize: 17.0,
+                      style:const  TextStyle(
+                        fontSize: 16.0,
                         fontWeight: FontWeight.bold,
                         overflow: TextOverflow.ellipsis,
                       height: 1.5
                       ),
-                      textAlign: TextAlign.start,
+                      textAlign: TextAlign.center,
                       maxLines: 3,
                     ),
                     const SizedBox(

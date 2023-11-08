@@ -22,6 +22,9 @@ import 'package:flutter/material.dart';
   static bool isDesktop(BuildContext context) =>
       MediaQuery.of(context).size.width >= 1200.0;
 
+  static bool isUnsupported(BuildContext context) =>
+      MediaQuery.of(context).size.height <= 452;
+
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
