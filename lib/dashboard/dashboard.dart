@@ -59,7 +59,7 @@ class _DashboardState extends ConsumerState<Dashboard>
     return Stack(
       children: [
         ScrollConfiguration(
-          behavior: ScrollConfiguration.of(context).copyWith(scrollbars: false),
+          behavior: ScrollConfiguration.of(context).copyWith(scrollbars: true),
           child: SingleChildScrollView(
             physics: const BouncingScrollPhysics(),
             child: Column(

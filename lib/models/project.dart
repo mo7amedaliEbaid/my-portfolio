@@ -31,13 +31,25 @@ class ProjectModel {
       buttonText: "Github Link",
     ),
     ProjectModel(
+      project: "Flutter App",
+      title: "Quran App",
+      description: "Flutter Quran app to read or listen to the holly quran recited by multiple readers, Cubit state management and clean architecture principles are applied.",
+      projectLink: "https://github.com/mo7amedaliEbaid/quran",
+      techUsed: [
+        TechnologyConstants.flutter,
+        TechnologyConstants.dart,
+      ],
+      buttonText: "Github Link",
+    ),
+    ProjectModel(
       project: "Flutter Project",
       title: "Kafka",
-      description: "Fully functional website working perfectly in flutter application for the books and quotes of Franz Kafka.",
+      description: "Fully functional Multiplatform project working perfectly with android, ios, desktop and web for the books and quotes of Franz Kafka.",
       projectLink: "https://github.com/mo7amedaliEbaid/kafka",
       techUsed: [
         TechnologyConstants.flutter,
         TechnologyConstants.dart,
+        TechnologyConstants.linux
       ],
       buttonText: "Github Link",
     ),
@@ -46,11 +58,12 @@ class ProjectModel {
       project: "Flutter App",
       title: "Movies App",
       description:
-      "Movies application based on TMDB api, built with clean architecture and riverpod state management.",
+      "Movies multiplatform application based on TMDB api, built with clean architecture and riverpod state management.",
       projectLink: "https://github.com/mo7amedaliEbaid/movies_riverpod",
       techUsed: [
         TechnologyConstants.flutter,
         TechnologyConstants.dart,
+        TechnologyConstants.linux
       ],
       buttonText: "Github Link",
     ),
@@ -76,6 +89,7 @@ class ProjectModel {
       techUsed: [
         TechnologyConstants.flutter,
         TechnologyConstants.dart,
+        TechnologyConstants.linux
       ],
       buttonText: "Github Link",
     ),
@@ -107,7 +121,19 @@ class ProjectModel {
     ),
     ProjectModel(
       project: "Flutter App",
-      title: "Audio Bliss",
+      title: "Run Tracker",
+      description:
+      "It's a run tracker app to track the distance , speed and time of your activity (running, cycling,......). It's built with clean architecture and riverpod state management.",
+      projectLink: "https://github.com/mo7amedaliEbaid/run-tracker",
+      techUsed: [
+        TechnologyConstants.flutter,
+        TechnologyConstants.dart,
+      ],
+      buttonText: "Github Link",
+    ),
+    ProjectModel(
+      project: "Flutter App",
+      title: "Audio Player",
       description:
       "Audio Bliss is an audio \" MP3 \" player built in flutter, It asks for permission to access internal storage and once it is allowed you can play any mp3 file from your internal storage in this app.",
       projectLink: "https://github.com/mo7amedaliEbaid/audio-bliss",
@@ -115,6 +141,31 @@ class ProjectModel {
         TechnologyConstants.flutter,
         TechnologyConstants.firebase,
         TechnologyConstants.dart,
+      ],
+      buttonText: "Github Link",
+    ),
+    ProjectModel(
+      project: "Flutter App",
+      title: "Weather TDD",
+      description:
+      "A simple project in my journey of learning Test-driven development (TDD) and Tests in Flutter.",
+      projectLink: "https://github.com/mo7amedaliEbaid/weather-TDD",
+      techUsed: [
+        TechnologyConstants.flutter,
+        TechnologyConstants.dart,
+      ],
+      buttonText: "Github Link",
+    ),
+    ProjectModel(
+      project: "Flutter Project",
+      title: "Fitness App",
+      description:
+      "Multiplatform (Android, Ios, Desktop) fitness app with clean architecture and bloc state maanagement.",
+      projectLink: "https://github.com/mo7amedaliEbaid/fitness-app-clean-arch",
+      techUsed: [
+        TechnologyConstants.flutter,
+        TechnologyConstants.dart,
+        TechnologyConstants.linux
       ],
       buttonText: "Github Link",
     ),
